@@ -43,16 +43,17 @@ int LargeArrayTest::Random(int size, int count){
     //std::vector<int> array;
     //array.reserve(size);
     int *array = new int[size];
-
-    int a = rand();
+    std::uniform_real_distribution<double> rndStart(0, size);
+    std::uniform_real_distribution<double> rndSize(1.0, size / 10);
+    std::uniform_real_distribution<double> rndStep(1.0, 100);
 
     int c = 0;
 
     while (true)
     {
-        int start = arc4random_uniform(size);
-        int cnt = arc4random_uniform(size / 10);
-        int step = arc4random_uniform(100) + 1;
+        int start = rndStart(mt);
+        int cnt = rndSize(mt);
+        int step = rndStep(mt);
 
         int pos = start;
         for (int i = 1; i <= cnt; i++)
