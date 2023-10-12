@@ -6,14 +6,14 @@ using namespace std::chrono;
 
 int main() {
     int dataSize = 100000;
-    int testsCount = 10000000;
+    int testsCount = 1000000;
     int steps = 80;
     double mul = 1.1;
     int step = 0;
     LargeArrayTest g;
 
     while(step++ < steps) {
-        int rpt = 25;
+        int rpt = 250;
         double sum_seq = 0;
         double sum_rnd = 0;
         int cnt = 0;

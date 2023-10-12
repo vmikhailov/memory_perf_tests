@@ -18,7 +18,7 @@ int LargeArrayTest::Sequential(int size, int count) {
     //array.reserve(size);
     int *array = new int[size];
     std::uniform_real_distribution<double> rndPosition(0, size);
-    std::uniform_real_distribution<double> rndSize(1.0, size / 10);
+    std::uniform_real_distribution<double> rndSize(1.0, 10000);
 
     int c = 0;
     while (true) {
@@ -44,7 +44,7 @@ int LargeArrayTest::Random(int size, int count){
     //array.reserve(size);
     int *array = new int[size];
     std::uniform_real_distribution<double> rndStart(0, size);
-    std::uniform_real_distribution<double> rndSize(1.0, size / 10);
+    std::uniform_real_distribution<double> rndSize(1.0, 10000);
     std::uniform_real_distribution<double> rndStep(1.0, 100);
 
     int c = 0;
