@@ -5,7 +5,7 @@ using PerformanceResearch;
 
 var sw = new Stopwatch();
 var dataSize = 100_000;
-var testsCount = 10_000_000;
+var testsCount = 1000000;
 var steps = 80;
 var mul = 1.1d;
 var step = 0;
@@ -15,7 +15,7 @@ while (step++ < steps)
     var sum_seq = 0d;
     var sum_rnd = 0d;
     var cnt = 0;
-    var rpt = 25;
+    var rpt = 250;
     var v = 0d;
 
     while (--rpt >= 0)

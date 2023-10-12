@@ -15,7 +15,7 @@ public static class LargeArrayAccess
         while (true)
         {
             var pos = r.Next(size);
-            var cnt = r.Next(size / 10);
+            var cnt = r.Next(10000);
 
             for (var i = 0; i < cnt; i++)
             {
@@ -39,8 +39,8 @@ public static class LargeArrayAccess
         while (true)
         {
             var start = r.Next(size);
-            var cnt = r.Next(size / 10);
-            var step = r.Next(10) + 1;
+            var cnt = r.Next(10000);
+            var step = r.Next(100) + 1;
 
             var pos = start;
             for (var i = 1; i <= cnt; i++)
