@@ -17,16 +17,17 @@ while (step++ < steps)
     var cnt = 0;
     var rpt = 250;
     var v = 0d;
+    var g = new LargeArrayAccess();
 
     while (--rpt >= 0)
     {
         sw.Restart();
-        v = LargeArrayAccess.Sequential(dataSize, testsCount);
+        v = g.Sequential(dataSize, testsCount);
         sw.Stop();
         sum_seq += (sw.Elapsed.TotalMicroseconds) * testsCount / v;
 
         sw.Restart();
-        v = LargeArrayAccess.Random(dataSize, testsCount);
+        v = g.Random(dataSize, testsCount);
         sw.Stop();
         sum_rnd += (sw.Elapsed.TotalMicroseconds) * testsCount / v;
 
