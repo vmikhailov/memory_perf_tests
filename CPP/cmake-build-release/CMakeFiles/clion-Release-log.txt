@@ -1,0 +1,4 @@
+/Users/slava/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_MAKE_PROGRAM=/Users/slava/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/slava/Projects/Research/PerformanceResearchCpp -B /Users/slava/Projects/Research/PerformanceResearchCpp/cmake-build-release
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/slava/Projects/Research/PerformanceResearchCpp/cmake-build-release
