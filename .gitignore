@@ -45,7 +45,7 @@ riderModule.iml
 # *.ipr
 
 # CMake
-CPP/cmake-build-*/
+cmake-build-*/
 
 # Mongo Explorer plugin
 .idea/**/mongoSettings.xml
