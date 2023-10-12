@@ -44,6 +44,8 @@ int LargeArrayTest::Random(int size, int count){
     //array.reserve(size);
     int *array = new int[size];
 
+    int a = rand();
+
     int c = 0;
 
     while (true)
