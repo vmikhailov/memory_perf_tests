@@ -10,6 +10,7 @@ int main() {
     int steps = 80;
     double mul = 1.1;
     int step = 0;
+    LargeArrayTest g;
 
     while(step++ < steps) {
         int rpt = 25;
@@ -19,12 +20,12 @@ int main() {
 
         while(--rpt >= 0) {
             auto start = high_resolution_clock::now();
-            int actualTestsCount = LargeArrayTest::Sequential(dataSize, testsCount);
+            int actualTestsCount = g.Sequential(dataSize, testsCount);
             auto stop = high_resolution_clock::now();
             sum_seq += duration_cast<microseconds>(stop - start).count() * 1.0 * testsCount / actualTestsCount;
 
             start = high_resolution_clock::now();
-            actualTestsCount = LargeArrayTest::Random(dataSize, testsCount);
+            actualTestsCount = g.Random(dataSize, testsCount);
             stop = high_resolution_clock::now();
             sum_rnd += duration_cast<microseconds>(stop - start).count() * 1.0 * testsCount / actualTestsCount;
 

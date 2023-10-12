@@ -4,11 +4,16 @@
 
 #ifndef PEFORMANCERESEARCHCPP_LARGEARRAYTEST_H
 #define PEFORMANCERESEARCHCPP_LARGEARRAYTEST_H
+#include <random>
 
 class LargeArrayTest {
+private:
+    std::mt19937 mt;
+
 public:
-    static int Sequential(int size, int count);
-    static int Random(int size, int count);
+    LargeArrayTest();
+    int Sequential(int size, int count);
+    int Random(int size, int count);
 };
 
 

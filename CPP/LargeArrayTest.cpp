@@ -6,19 +6,24 @@
 #include "LargeArrayTest.h"
 #include <array>
 #include <iostream>
+#include <random>
 
 using namespace std;
 
+LargeArrayTest::LargeArrayTest() {
+}
 
 int LargeArrayTest::Sequential(int size, int count) {
     //std::vector<int> array;
     //array.reserve(size);
     int *array = new int[size];
+    std::uniform_real_distribution<double> rndPosition(0, size);
+    std::uniform_real_distribution<double> rndSize(1.0, size / 10);
 
     int c = 0;
     while (true) {
-        int pos = arc4random_uniform(size);
-        int cnt = arc4random_uniform(size / 10);
+        int pos = rndPosition(mt);
+        int cnt = rndSize(mt);
 
         for (int i = 0; i < cnt; i++) {
             array[pos]++;
