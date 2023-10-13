@@ -27,7 +27,7 @@ public class LargeArrayAccess
             for (var i = 0; i < cnt; i++)
             {
                 //array[pos] = !array[pos];
-                array[pos]++;
+                //array[pos]++;
                 if (++pos >= size) pos = 0;
             }
 
@@ -51,7 +51,7 @@ public class LargeArrayAccess
             for (var i = 1; i <= cnt; i++)
             {
                 //array[pos] = !array[pos];
-                array[pos]++;
+                //array[pos]++;
                 //pos = (pos + start) % size;
                 pos += step;
                 if (pos >= size) pos -= size;
